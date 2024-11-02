@@ -1,177 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Likith SK | Personal Portfolio</title>
-    <style>
-        /* Root Variables */
-        :root {
-            --primary-color: #4a90e2;
-            --secondary-color: #333;
-            --background-color: #f7f7f7;
-            --font-family: 'Arial', sans-serif;
-        }
-
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-family);
-            color: var(--secondary-color);
-            background-color: var(--background-color);
-        }
-
-        /* Header Styles */
-        .header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-        }
-
-        .header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-
-        /* Section Layout */
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .section {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .section h2 {
-            color: var(--primary-color);
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-
-        /* Skills Section */
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-item {
-            text-align: center;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-        /* Contact Section */
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-form input, .contact-form textarea {
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-        .contact-form button {
-            padding: 12px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-
-        .contact-form button:hover {
-            background-color: #357ABD;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #777;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StarAgile - Online Agile and Scrum Courses">
+  <title>StarAgile | Online StarAgile Course</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-    <!-- Header Section -->
-    <header class="header">
-        <h1>Likith SK</h1>
-        <p>Web Developer | Designer | Content Creator</p>
-    </header>
-
+  <header>
     <div class="container">
-
-        <!-- About Section -->
-        <div class="section">
-            <h2>About Me</h2>
-            <p>Hello! I’m Likith SK, a passionate web developer with experience in building responsive and user-friendly websites. I specialize in front-end development and enjoy turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding, I create content to help others learn and grow in the tech space.</p>
-        </div>
-
-        <!-- Skills Section -->
-        <div class="section">
-            <h2>Skills</h2>
-            <div class="skills">
-                <div class="skill-item">
-                    <h3>HTML & CSS</h3>
-                    <p>Experienced in creating responsive designs.</p>
-                </div>
-                <div class="skill-item">
-                    <h3>JavaScript</h3>
-                    <p>Proficient in modern JavaScript frameworks.</p>
-                </div>
-                <div class="skill-item">
-                    <h3>React</h3>
-                    <p>Experienced in building dynamic UIs.</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Node.js</h3>
-                    <p>Skilled in building server-side applications.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="section">
-            <h2>Contact Me</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-
+      <h1>StarAgile</h1>
+      <nav>
+        <ul>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#instructors">Instructors</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#enroll" class="btn-primary">Enroll Now</a>
     </div>
+  </header>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Likith SK. All rights reserved.</p>
-    </footer>
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <h2>Master Agile and Scrum with StarAgile</h2>
+      <p>Join our online courses to boost your career in project management, led by industry experts.</p>
+      <a href="#enroll" class="btn-secondary">Start Your Journey</a>
+    </div>
+  </section>
 
+  <section id="courses" class="course-section">
+    <div class="container">
+      <h2>Our Courses</h2>
+      <div class="course-list">
+        <article class="course-card">
+          <h3>Certified Scrum Master (CSM)</h3>
+          <p>Learn the essentials of Scrum from certified trainers and gain hands-on experience.</p>
+          <button onclick="showMoreInfo('csm')">Learn More</button>
+        </article>
+        <article class="course-card">
+          <h3>Agile Project Management</h3>
+          <p>Master agile principles, practices, and how to lead successful projects.</p>
+          <button onclick="showMoreInfo('apm')">Learn More</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="instructors" class="instructors-section">
+    <div class="container">
+      <h2>Meet Our Instructors</h2>
+      <div class="instructor-list">
+        <div class="instructor-card">
+          <img src="instructor1.jpg" alt="Instructor John Doe">
+          <h3>John Doe</h3>
+          <p>Expert in Agile and Scrum with over 15 years of experience.</p>
+        </div>
+        <div class="instructor-card">
+          <img src="instructor2.jpg" alt="Instructor Jane Smith">
+          <h3>Jane Smith</h3>
+          <p>Project management veteran and Agile trainer with a focus on real-world applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" class="schedule-section">
+    <div class="container">
+      <h2>Upcoming Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Enroll</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Certified Scrum Master (CSM)</td>
+            <td>Jan 15, 2024</td>
+            <td>10:00 AM - 4:00 PM</td>
+            <td><a href="#enroll" class="btn-primary">Enroll</a></td>
+          </tr>
+          <tr>
+            <td>Agile Project Management</td>
+            <td>Feb 10, 2024</td>
+            <td>9:00 AM - 3:00 PM</td>
+            <td><a href="#enroll" class="btn-primary">Enroll</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: support@staragile.com | Phone: +1 123-456-7890</p>
+      <p>&copy; 2024 StarAgile. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modals for additional course info -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+    </div>
+  </div>
 </body>
 </html>
