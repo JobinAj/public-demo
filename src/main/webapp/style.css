@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #222;
+}
+
+header h1 {
+    color: #f00;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+.trailer-section video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.game-modes .mode {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+}
+
+.game-modes img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.game-modes img:hover {
+    transform: scale(1.1);
+}
+
+.car-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.car-selection .car-model {
+    margin: 20px;
+}
+
+.leaderboard table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+    border: 1px solid #fff;
+    padding: 10px;
+}
