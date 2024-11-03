@@ -22,7 +22,7 @@
 
     <!-- Game Trailer Section -->
     <section id="home" class="section trailer-section">
-        <h2>Experience the Thrill of Game</h2>
+        <h2>Experience the Thrill </h2>
         <video controls autoplay muted loop>
             <source src="nfs-trailer.mp4" type="video/mp4">
             Your browser does not support the video tag.
