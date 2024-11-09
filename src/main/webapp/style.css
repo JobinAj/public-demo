@@ -1,77 +1,68 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #fff;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.background-image {
+    width: 100%;
+    opacity: 0.1;
+}
+
+#chatbox {
+    background-color: #111;
     padding: 20px;
-    background-color: #222;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
 }
 
-header h1 {
-    color: #f00;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.section {
-    padding: 40px;
-    text-align: center;
-}
-
-.trailer-section video {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 10px;
-}
-
-.game-modes .mode {
-    display: inline-block;
-    width: 200px;
-    margin: 20px;
-}
-
-.game-modes img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.2s ease;
-}
-
-.game-modes img:hover {
-    transform: scale(1.1);
-}
-
-.car-selection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.car-selection .car-model {
-    margin: 20px;
-}
-
-.leaderboard table {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-
-.leaderboard th, .leaderboard td {
-    border: 1px solid #fff;
+#messages {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #00ff00;
     padding: 10px;
+    margin-bottom: 10px;
+}
+
+#userInput {
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    background: #222;
+    color: #00ff00;
+    border: none;
+}
+
+#sendBtn {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #00ff00;
+    border: none;
+    cursor: pointer;
+}
+
+#sendBtn:hover {
+    background-color: #555;
 }
