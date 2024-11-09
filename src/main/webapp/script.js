@@ -1,27 +1,40 @@
-// Car customization logic
-const carImage = document.getElementById('car-image');
-const colorSelect = document.getElementById('color-select');
+document.getElementById("sendBtn").addEventListener("click", sendMessage);
 
-colorSelect.addEventListener('change', (event) => {
-    const color = event.target.value;
-    carImage.src = `car_${color}.png`; // Assumes images like car_red.png, car_blue.png, etc.
-});
+function sendMessage() {
+    const userInput = document.getElementById("userInput").value;
+    if (userInput.trim() === "") return;
 
-// Sample leaderboard data fetch (replace with actual API if available)
-function populateLeaderboard() {
-    const leaderboardData = [
-        { player: 'Speedster', score: 3500, rank: 1 },
-        { player: 'Nitro', score: 3400, rank: 2 },
-        { player: 'RoadKing', score: 3300, rank: 3 }
-    ];
-    
-    const leaderboardTable = document.getElementById('leaderboard-table');
-    leaderboardData.forEach(data => {
-        const row = document.createElement('tr');
-        row.innerHTML = `<td>${data.player}</td><td>${data.score}</td><td>${data.rank}</td>`;
-        leaderboardTable.appendChild(row);
-    });
+    appendMessage("You", userInput);
+    document.getElementById("userInput").value = "";
+
+    // Simulate a bot response after a delay
+    setTimeout(() => {
+        const botResponse = getBotResponse(userInput);
+        appendMessage("Bot", botResponse);
+    }, 1000);
 }
 
-// Call the function on page load
-document.addEventListener('DOMContentLoaded', populateLeaderboard);
+function appendMessage(sender, message) {
+    const messagesDiv = document.getElementById("messages");
+    const newMessage = document.createElement("p");
+    newMessage.innerHTML = `<strong>${sender}:</strong> ${message}`;
+    messagesDiv.appendChild(newMessage);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+function getBotResponse(userInput) {
+    // Basic AI responses (replace with API call for real responses)
+    const responses = {
+        hello: "Hello, hacker. How can I assist you today?",
+        hack: "Ah, you want to learn about hacking? Start by understanding networks and systems!",
+        help: "I’m here to answer your questions. Ask me anything!",
+    };
+
+    // Check if userInput matches any key in responses
+    for (const keyword in responses) {
+        if (userInput.toLowerCase().includes(keyword)) {
+            return responses[keyword];
+        }
+    }
+    return "I don’t understand that yet, but I’m learning!";
+}
